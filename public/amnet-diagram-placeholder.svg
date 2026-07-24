@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" rx="12" fill="#0b1329"/>
+  <rect x="50" y="160" width="180" height="100" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="2"/>
+  <text x="140" y="205" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">React + Sigma.js</text>
+  <text x="140" y="225" font-family="Inter, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Frontend Control Panel</text>
+  <path d="M 230 210 L 330 210" stroke="#06b6d4" stroke-width="3" stroke-dasharray="6,6"/>
+  <rect x="330" y="160" width="160" height="100" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="410" y="205" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">NATS / JetStream</text>
+  <text x="410" y="225" font-family="Inter, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Real-Time Event Stream</text>
+  <path d="M 490 210 L 590 210" stroke="#10b981" stroke-width="3" stroke-dasharray="6,6"/>
+  <rect x="590" y="160" width="160" height="100" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+  <text x="670" y="205" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">Zero-Trust Nodes</text>
+  <text x="670" y="225" font-family="Inter, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">~10,000 Devices</text>
+  <text x="400" y="380" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#94a3b8" text-anchor="middle">Network Graph Architecture Diagram Placeholder</text>
+</svg>

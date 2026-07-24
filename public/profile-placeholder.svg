@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#avatarGrad)"/>
+  <rect x="2" y="2" width="396" height="396" rx="22" fill="none" stroke="url(#accentGrad)" stroke-width="2" opacity="0.6"/>
+  <!-- Head & Body outline placeholder -->
+  <circle cx="200" cy="150" r="65" fill="#334155"/>
+  <path d="M 90 340 C 90 250, 140 230, 200 230 C 260 230, 310 250, 310 340 Z" fill="#334155"/>
+  <!-- Badge label -->
+  <rect x="100" y="320" width="200" height="40" rx="8" fill="#0b0f19" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="200" y="345" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">Full-Stack TypeScript Dev</text>
+</svg>

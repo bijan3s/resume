@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" rx="12" fill="#0f172a"/>
+  <rect x="30" y="30" width="740" height="340" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="180" font-family="'JetBrains Mono', monospace" font-size="18" fill="#f59e0b" text-anchor="middle">[ BOT CONTROL TESTING PANEL ]</text>
+  <text x="400" y="220" font-family="Inter, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Simulates multi-client game states &amp; injects actions into physical test devices</text>
+  <text x="400" y="410" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">Bot-Control Panel Screenshot Placeholder</text>
+</svg>

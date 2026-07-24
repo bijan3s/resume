@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" rx="12" fill="#0f172a"/>
+  <!-- Mobile phone mockup outlines -->
+  <rect x="220" y="50" width="160" height="320" rx="20" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+  <rect x="420" y="50" width="160" height="320" rx="20" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+  <text x="300" y="210" font-family="Inter, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Kotlin / Compose Client</text>
+  <text x="500" y="210" font-family="Inter, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">React Native Client</text>
+  <text x="400" y="410" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">Multiplayer Mafia Game Mobile Screenshots Placeholder</text>
+</svg>
