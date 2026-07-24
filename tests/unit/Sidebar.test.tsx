@@ -20,11 +20,11 @@ describe('Sidebar component', () => {
     expect(screen.getByText('Open to Relocation')).toBeInTheDocument();
   });
 
-  it('renders Download Résumé button', () => {
+  it('renders View / Download Résumé button', () => {
     renderSidebar();
-    const resumeBtn = screen.getByRole('link', { name: /download résumé \(pdf\)/i });
+    const resumeBtn = screen.getByRole('link', { name: /view \/ download résumé/i });
     expect(resumeBtn).toBeInTheDocument();
-    expect(resumeBtn).toHaveAttribute('href', '/resume.pdf');
+    expect(resumeBtn).toHaveAttribute('href', '/resume.html');
   });
 
   it('handles profile image load error gracefully with fallback', () => {
