@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button, Stack, Grid, useTheme } from '@mui/material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import DownloadIcon from '@mui/icons-material/Download';
+import DescriptionIcon from '@mui/icons-material/Description';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { profileData } from '../data/profile';
 
@@ -63,7 +63,7 @@ export const HeroSection: React.FC = () => {
       </Grid>
 
       {/* Action Buttons */}
-      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} flexWrap="wrap" sx={{ gap: 1.5 }}>
         <Button
           variant="contained"
           color="primary"
@@ -78,11 +78,12 @@ export const HeroSection: React.FC = () => {
           color="primary"
           size="large"
           component="a"
-          href={profileData.resumeUrl}
-          download
-          startIcon={<DownloadIcon />}
+          href="/resume.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          startIcon={<DescriptionIcon />}
         >
-          Download Résumé
+          View / Download Résumé
         </Button>
       </Stack>
     </Box>

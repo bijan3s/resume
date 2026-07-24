@@ -9,11 +9,11 @@ import {
   Divider,
 } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import DownloadIcon from '@mui/icons-material/Download';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import DescriptionIcon from '@mui/icons-material/Description';
 import { profileData } from '../data/profile';
 import { ProfileImage } from './ProfileImage';
 
@@ -64,7 +64,7 @@ export const Sidebar: React.FC = () => {
           boxSizing: 'border-box',
         }}
       >
-        {/* Fully Rounded Profile Image */}
+        {/* Dark Indigo Bordered Profile Image Avatar */}
         <Box sx={{ mb: 2.5, mt: { lg: 2 } }}>
           <ProfileImage src={profileData.profileImage} alt={profileData.name} size={150} />
         </Box>
@@ -172,15 +172,16 @@ export const Sidebar: React.FC = () => {
           </IconButton>
         </Stack>
 
-        {/* Download Résumé Button */}
+        {/* View / Download Résumé Button (HTML) */}
         <Button
           fullWidth
           variant="contained"
           size="small"
           component="a"
-          href={profileData.resumeUrl}
-          download
-          startIcon={<DownloadIcon />}
+          href="/resume.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          startIcon={<DescriptionIcon />}
           sx={{
             py: 1.2,
             fontSize: '0.85rem',
@@ -195,7 +196,7 @@ export const Sidebar: React.FC = () => {
             },
           }}
         >
-          Download Résumé
+          View / Download Résumé
         </Button>
 
         <Divider sx={{ width: '100%', mb: 2, borderColor: 'rgba(255, 255, 255, 0.1)' }} />

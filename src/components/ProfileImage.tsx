@@ -31,7 +31,7 @@ export const ProfileImage: React.FC<ProfileImageProps> = ({
         height: { xs: 130, sm: 150, md: size },
         borderRadius: '50%',
         overflow: 'hidden',
-        border: `2px solid ${theme.palette.primary.main}`,
+        border: '3px solid #1e1b4b', // Dark Indigo 900 border
         backgroundColor: theme.palette.background.paper,
         display: 'flex',
         alignItems: 'center',
@@ -43,6 +43,7 @@ export const ProfileImage: React.FC<ProfileImageProps> = ({
         transition: 'all 0.25s ease-in-out',
         '&:hover': {
           transform: 'scale(1.03)',
+          borderColor: '#312e81',
           boxShadow: theme.palette.mode === 'dark'
             ? '0 6px 24px rgba(129, 140, 248, 0.3)'
             : '0 6px 24px rgba(79, 70, 229, 0.2)',

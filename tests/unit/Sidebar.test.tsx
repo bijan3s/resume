@@ -22,9 +22,9 @@ describe('Sidebar component', () => {
 
   it('renders Download Résumé button', () => {
     renderSidebar();
-    const resumeBtn = screen.getByRole('link', { name: /download résumé/i });
+    const resumeBtn = screen.getByRole('link', { name: /download résumé \(pdf\)/i });
     expect(resumeBtn).toBeInTheDocument();
-    expect(resumeBtn).toHaveAttribute('href', profileData.resumeUrl);
+    expect(resumeBtn).toHaveAttribute('href', '/resume.pdf');
   });
 
   it('handles profile image load error gracefully with fallback', () => {

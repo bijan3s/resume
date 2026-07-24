@@ -26,8 +26,8 @@ test.describe('Portfolio E2E Tests', () => {
     await expect(npmLink).toHaveAttribute('href', 'https://www.npmjs.com/package/react-highlight-within');
 
     // Check resume download link
-    const resumeLink = page.getByRole('link', { name: /download résumé/i }).first();
-    await expect(resumeLink).toHaveAttribute('href', profileData.resumeUrl);
+    const resumeLink = page.getByRole('link', { name: /download résumé \(pdf\)/i }).first();
+    await expect(resumeLink).toHaveAttribute('href', '/resume.pdf');
   });
 
   test('no horizontal scroll overflow at 360px mobile width', async ({ page }) => {
