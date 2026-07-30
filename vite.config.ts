@@ -5,8 +5,8 @@ import path from 'path';
 
 // Support GitHub Pages repository sub-paths (e.g. /portfolio/)
 // Determine base path for GitHub Pages (repo name) when not explicitly set
-const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? ''
-const basePath = process.env.VITE_BASE_PATH ?? `/${repoName ? repoName + '/' : ''}`
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
+const basePath = process.env.VITE_BASE_PATH || (repoName ? `/${repoName}/` : './');
 
 export default defineConfig({
   plugins: [react()],

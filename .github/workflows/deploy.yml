@@ -36,7 +36,7 @@ jobs:
       - name: Build project for GitHub Pages
         run: yarn build
         env:
-          VITE_BASE_PATH: ${{ secrets.VITE_BASE_PATH || '/' }}
+          VITE_BASE_PATH: ${{ secrets.VITE_BASE_PATH }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
