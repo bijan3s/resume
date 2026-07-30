@@ -1,8 +1,8 @@
-# Full-Stack TypeScript Developer Portfolio
+# Full-Stack TypeScript Engineer Portfolio
 
-A production-quality, responsive personal portfolio website for a **Full-Stack TypeScript Developer** specializing in real-time dashboards, cybersecurity products, complex frontend systems, automated testing, and performance optimization.
+A production-quality, responsive personal portfolio website for a **Full-Stack TypeScript Engineer** specializing in real-time dashboards, cybersecurity products, complex frontend systems, automated testing, and performance optimization.
 
-Built with **React 19**, **TypeScript 5**, **Vite 6**, **Material UI (MUI v6)**, **Vitest**, **React Testing Library**, **Playwright**, and **GitHub Actions** for automated static deployment to **GitHub Pages**.
+Built with **React 19**, **TypeScript 7**, **Vite 8**, **Material UI (MUI v9)**, **Vitest**, **React Testing Library**, **Playwright**, and **GitHub Actions** for automated static deployment to **GitHub Pages**.
 
 ---
 
@@ -19,18 +19,19 @@ Built with **React 19**, **TypeScript 5**, **Vite 6**, **Material UI (MUI v6)**,
 
 ## 🛠️ Technology Stack
 
-| Layer | Technology |
-|---|---|
-| **Framework & UI** | React 19, Material UI (MUI v6), @emotion/react, @emotion/styled |
-| **Build & Tooling** | Vite 6, TypeScript 5, ESLint, Prettier |
-| **Testing** | Vitest, React Testing Library, Playwright (E2E) |
-| **CI/CD & Hosting** | GitHub Actions, GitHub Pages |
+| Layer               | Technology                                                      |
+| ------------------- | --------------------------------------------------------------- |
+| **Framework & UI**  | React 19, Material UI (MUI v9), @emotion/react, @emotion/styled |
+| **Build & Tooling** | Vite 8, TypeScript 7, ESLint, Prettier                          |
+| **Testing**         | Vitest, React Testing Library, Playwright (E2E)                 |
+| **CI/CD & Hosting** | GitHub Actions, GitHub Pages                                    |
 
 ---
 
 ## 📋 Prerequisites & Quick Start
 
 ### Node.js Requirement
+
 - **Node.js**: `v20.0.0` or higher (Tested on Node v24.15.0)
 - **NPM**: `v10.0.0` or higher
 
@@ -55,59 +56,17 @@ yarn dev
 
 ## 💻 Available Commands
 
-| Command | Description |
-|---|---|
-| `yarn dev` | Starts Vite local development server at `http://localhost:5173` |
-| `yarn build` | Compiles TypeScript and builds production static bundle to `dist/` |
-| `yarn preview` | Previews the built production static app locally |
-| `yarn test` | Runs Vitest unit and component test suite |
-| `yarn test:watch` | Runs Vitest in watch mode |
-| `yarn test:e2e` | Executes Playwright end-to-end tests across viewports |
-| `yarn typecheck` | Validates strict TypeScript compilation without emitting JS |
-| `yarn lint` | Runs ESLint check across all codebase files |
-| `yarn format` | Formats codebase using Prettier |
-
----
-
-## 📁 Directory Structure
-
-```text
-portfolio/
-├── .github/
-│   └── workflows/
-│       ├── ci.yml            # Automated CI typecheck, test, and build workflow
-│       └── deploy.yml        # GitHub Pages deployment workflow
-├── public/
-│   ├── favicon.svg           # Tech branding favicon
-│   ├── profile-placeholder.svg
-│   ├── social-preview-placeholder.svg
-│   ├── amnet-dashboard-placeholder.svg
-│   ├── amnet-diagram-placeholder.svg
-│   ├── mafia-mobile-placeholder.svg
-│   ├── mafia-diagram-placeholder.svg
-│   ├── mafia-bot-placeholder.svg
-│   ├── resume.pdf            # PDF Resume download target
-│   └── CNAME                 # Custom domain configuration placeholder
-├── src/
-│   ├── components/           # Reusable UI elements (Header, Footer, MediaPlaceholder, etc.)
-│   ├── data/                 # Content data files (profile, experience, projects, skills, etc.)
-│   ├── sections/             # Page sections (Hero, Impact, Experience, Projects, Skills, etc.)
-│   ├── theme/                # Custom MUI theme tokens and ThemeProvider context
-│   ├── types/                # Strict TypeScript interfaces
-│   ├── App.tsx               # Root Application layout
-│   ├── index.css             # Global CSS reset & reduced-motion rules
-│   └── main.tsx              # Application entry point
-├── tests/
-│   ├── unit/                 # Vitest & React Testing Library component tests
-│   └── e2e/                  # Playwright end-to-end test suite
-├── index.html                # Page entry with complete SEO & JSON-LD metadata
-├── package.json
-├── vite.config.ts            # Vite & Vitest configuration
-├── playwright.config.ts      # Playwright E2E configuration
-├── tsconfig.json
-├── README.md
-└── LICENSE
-```
+| Command           | Description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| `yarn dev`        | Starts Vite local development server at `http://localhost:5173`    |
+| `yarn build`      | Compiles TypeScript and builds production static bundle to `dist/` |
+| `yarn preview`    | Previews the built production static app locally                   |
+| `yarn test`       | Runs Vitest unit and component test suite                          |
+| `yarn test:watch` | Runs Vitest in watch mode                                          |
+| `yarn test:e2e`   | Executes Playwright end-to-end tests across viewports              |
+| `yarn typecheck`  | Validates strict TypeScript compilation without emitting JS        |
+| `yarn lint`       | Runs ESLint check across all codebase files                        |
+| `yarn format`     | Formats codebase using Prettier                                    |
 
 ---
 
@@ -116,12 +75,13 @@ portfolio/
 All personal data, experience timeline details, project case studies, and skills are stored in `src/data/`:
 
 ### 1. Update Profile & Contact Info (`src/data/profile.ts`)
+
 Replace placeholders like `[FULL NAME]`, `[EMAIL ADDRESS]`, `[LINKEDIN URL]`, and `[GITHUB URL]` with your actual details:
 
 ```ts
 export const profileData: Profile = {
   name: 'Your Name',
-  headlineTitle: 'Full-Stack TypeScript Developer',
+  headlineTitle: 'Full-Stack TypeScript Engineer',
   email: 'your.email@example.com',
   linkedInUrl: 'https://linkedin.com/in/yourprofile',
   githubUrl: 'https://github.com/yourusername',
@@ -132,17 +92,21 @@ export const profileData: Profile = {
 ```
 
 ### 2. Replace Profile Image
-Add your photo to `public/profile.jpg` (or `profile.png`) and update `profileImage` in `src/data/profile.ts`:
+
+Add your photo as `public/profile.webp` and update `profileImage` in `src/data/profile.ts`:
 
 ```ts
-profileImage: '/profile.jpg',
+profileImage: './profile.webp',
 ```
-*Note: If the image fails to load or is missing, the site gracefully falls back to a neutral SVG avatar placeholder without breaking layout.*
+
+_Note: If the image fails to load or is missing, the site gracefully falls back to a neutral SVG avatar placeholder without breaking layout._
 
 ### 3. Replace Résumé PDF
-Drop your official resume file into `public/resume.pdf`. The header and hero download buttons link directly to `/resume.pdf`.
+
+Drop your official resume file into `public/resume.pdf`. The header and hero download buttons link directly to `./resume.pdf`.
 
 ### 4. Add or Edit Project Case Studies (`src/data/projects.ts`)
+
 Each project in `projectsData` adheres to the `Project` interface:
 
 ```ts
@@ -167,15 +131,20 @@ Each project in `projectsData` adheres to the `Project` interface:
 This project is configured to deploy automatically to GitHub Pages via GitHub Actions when pushing to the `main` or `master` branch.
 
 ### 1. Repository Settings Setup
+
 1. On GitHub, go to your repository **Settings** -> **Pages**.
 2. Under **Build and deployment** -> **Source**, select **GitHub Actions**.
 
 ### 2. Base Path Handling
+
 The Vite build automatically handles both root domains (`username.github.io`) and sub-path repository URLs (`username.github.io/portfolio/`).
+
 - If deploying to a project repository (`username.github.io/portfolio`), set an environment variable secret `VITE_BASE_PATH` in GitHub Secrets to `/portfolio/`, or let GitHub Actions build using relative assets.
 
 ### 3. Custom Domain Setup (Optional)
+
 If using a custom domain (e.g. `portfolio.yourdomain.com`):
+
 1. Add your custom domain to `public/CNAME`.
 2. Configure your domain registrar's DNS settings (CNAME or ALIAS record pointing to `username.github.io`).
 
@@ -184,11 +153,13 @@ If using a custom domain (e.g. `portfolio.yourdomain.com`):
 ## 🧪 Running Tests
 
 ### Unit Tests (Vitest)
+
 ```bash
 npm run test
 ```
 
 ### End-to-End Tests (Playwright)
+
 ```bash
 # Install Playwright browser binaries first time
 npx playwright install --with-deps chromium

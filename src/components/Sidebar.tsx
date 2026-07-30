@@ -3,24 +3,12 @@ import EmailIcon from '@mui/icons-material/Email';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { Box, Button, Chip, Divider, IconButton, Stack, Typography } from '@mui/material';
+import { Box, Button, Chip, IconButton, Stack } from '@mui/material';
 import React from 'react';
 
 import { profileData } from '../data/profile';
-import { ProfileImage } from './ProfileImage';
-
-const featuredSkillBadges = [
-  'React',
-  'TypeScript',
-  'Next.js',
-  'Node.js',
-  'Nest.js',
-  'Playwright',
-  'Monitoring',
-  'Grafana',
-  'NATS',
-];
+import { SidebarIdentity } from './SidebarIdentity';
+import { SidebarSkills } from './SidebarSkills';
 
 export const Sidebar: React.FC = () => {
   return (
@@ -60,51 +48,7 @@ export const Sidebar: React.FC = () => {
           boxSizing: 'border-box',
         }}
       >
-        {/* Dark Indigo Bordered Profile Image Avatar */}
-        <Box sx={{ mb: 2.5, mt: { lg: 2 } }}>
-          <ProfileImage src={profileData.profileImage} alt={profileData.name} size={150} />
-        </Box>
-
-        {/* Name & Title */}
-        <Typography
-          variant="h4"
-          component="h2"
-          sx={{
-            fontWeight: 800,
-            fontSize: '1.4rem',
-            color: '#f8fafc',
-            mb: 0.5,
-          }}
-        >
-          {profileData.name}
-        </Typography>
-
-        <Typography
-          variant="subtitle2"
-          sx={{
-            color: '#818cf8',
-            fontWeight: 700,
-            fontSize: '0.875rem',
-            mb: 1.5,
-          }}
-        >
-          {profileData.headlineTitle}
-        </Typography>
-
-        {/* Location Display */}
-        <Stack
-          direction="row"
-          spacing={0.5}
-          sx={{ mb: 1.5, alignItems: 'center', justifyContent: 'center' }}
-        >
-          <LocationOnIcon sx={{ fontSize: '0.95rem', color: '#94a3b8' }} />
-          <Typography
-            variant="body2"
-            sx={{ color: '#94a3b8', fontSize: '0.825rem', fontWeight: 500 }}
-          >
-            {profileData.location}
-          </Typography>
-        </Stack>
+        <SidebarIdentity />
 
         {/* Open to Relocation Chip */}
         {profileData.openToRelocation && (
@@ -211,43 +155,7 @@ export const Sidebar: React.FC = () => {
           Download Résumé
         </Button>
 
-        <Divider sx={{ width: '100%', mb: 2, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
-
-        {/* Featured Skills Quick Badges */}
-        <Typography
-          variant="caption"
-          sx={{
-            fontWeight: 700,
-            color: '#94a3b8',
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            display: 'block',
-            mb: 1.5,
-          }}
-        >
-          Featured Skills
-        </Typography>
-
-        <Stack
-          direction="row"
-          spacing={0.8}
-          sx={{ gap: 0.8, flexWrap: 'wrap', justifyContent: 'center' }}
-        >
-          {featuredSkillBadges.map((skill) => (
-            <Chip
-              key={skill}
-              label={skill}
-              size="small"
-              sx={{
-                fontSize: '0.725rem',
-                fontWeight: 600,
-                backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                color: '#f1f5f9',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
-              }}
-            />
-          ))}
-        </Stack>
+        <SidebarSkills />
       </Box>
     </Box>
   );

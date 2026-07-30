@@ -8,7 +8,7 @@ export const projectsData: Project[] = [
       'Real-time control and monitoring panel for the AMNET zero-trust cybersecurity product (amnet.ir) at Amnesh.',
     context:
       'AMNET (amnet.ir) is an enterprise zero-trust networking platform enabling network administrators to monitor device relationships, security policies, and infrastructure state in real time.',
-    role: 'Frontend Architect & Developer leading UI panel design and real-time state integration.',
+    role: 'Frontend Architect & Engineer leading UI panel design and real-time state integration.',
     technologies: ['React', 'Material UI', 'NATS', 'JetStream', 'Docker', 'Playwright'],
     links: [
       {
@@ -20,13 +20,7 @@ export const projectsData: Project[] = [
     media: [
       {
         type: 'image',
-        src: './amnet.gif',
-        alt: 'AMNET Dashboard Demo GIF',
-        caption: 'AMNET zero-trust Landing page animation',
-      },
-      {
-        type: 'image',
-        src: './amnet.png',
+        src: './amnet.webp',
         alt: 'AMNET Dashboard Screenshot',
         caption: 'Sanitized AMNET zero-trust dashboard preview.',
       },
@@ -39,7 +33,7 @@ export const projectsData: Project[] = [
     status: 'Core functionality complete',
     context:
       'Multiplayer game platform featuring real-time state synchronization, Mediasoup voice channels, mobile client applications, and bot-driven automated testing environments.',
-    role: 'Full-Stack Developer managing backend APIs, Mediasoup voice integration, and bot testing infrastructure.',
+    role: 'Full-Stack Engineer managing backend APIs, Mediasoup voice integration, and bot testing infrastructure.',
     technologies: [
       'Kotlin',
       'Jetpack Compose',
@@ -53,7 +47,7 @@ export const projectsData: Project[] = [
     media: [
       {
         type: 'image',
-        src: './mafia.png',
+        src: './mafia.webp',
         alt: 'Mobile UI Screenshots',
         caption: 'Kotlin/Compose clients.',
       },
@@ -83,7 +77,7 @@ export const projectsData: Project[] = [
     subtitle: 'React operational interface for managing high-volume SMS gateway services.',
     context:
       'Management interface for dispatching, filtering, and scheduling high-volume SMS gateway services.',
-    role: 'Frontend Developer modernizing operational workflows and API components.',
+    role: 'Frontend Engineer modernizing operational workflows and API components.',
     technologies: ['React', 'TypeScript', 'Material UI', 'REST APIs', 'PostgreSQL'],
     links: [
       {

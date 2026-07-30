@@ -20,6 +20,7 @@ async function generatePdf() {
   console.log('Launching Playwright Chromium...');
   const browser = await chromium.launch({
     headless: true,
+    channel: 'chromium',
   });
 
   const page = await browser.newPage({
@@ -33,6 +34,21 @@ async function generatePdf() {
 
   // Give images and fonts time to render completely
   await page.waitForTimeout(1500);
+  await page.locator('img').evaluateAll(async (images) => {
+    images.forEach((image) => {
+      image.loading = 'eager';
+    });
+    await Promise.all(images.map((image) => image.decode()));
+    images.forEach((image) => {
+      const scale = Math.min(1, (image.clientWidth * 2) / image.naturalWidth);
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(image.naturalWidth * scale);
+      canvas.height = Math.round(image.naturalHeight * scale);
+      canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
+      image.src = canvas.toDataURL('image/jpeg', 0.75);
+    });
+    await Promise.all(images.map((image) => image.decode()));
+  });
 
   const fullHeight = await page.evaluate(() => document.documentElement.scrollHeight);
   console.log(`Document scroll height: ${fullHeight}px`);
@@ -50,6 +66,9 @@ async function generatePdf() {
     height: `${fullHeight}px`,
     margin: { top: '0px', right: '0px', bottom: '0px', left: '0px' },
   });
+
+  const size = fs.statSync(pdfPath).size;
+  if (size >= 2 * 1024 * 1024) throw new Error(`PDF is ${(size / 1024 / 1024).toFixed(2)} MB`);
 
   console.log(`Successfully generated pixel-perfect desktop PDF at: ${pdfPath}`);
 

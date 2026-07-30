@@ -4,13 +4,13 @@ export const experienceData: Experience[] = [
   {
     id: 'amnesh',
     company: 'Amnesh',
-    role: 'Frontend Developer & Monitoring Engineer',
+    role: 'Frontend & Monitoring Engineer',
     startDate: 'December 2024',
     endDate: 'Present',
     location: 'Neyshabur, Iran',
     workMode: 'Development Site',
     description:
-      'Amnesh develops enterprise cybersecurity platforms including AMNET, zero-trust networking platform (amnet.ir), enterprise security routers, and Mobile Device Management (MDM) solutions.',
+      'Amnesh develops enterprise cybersecurity platforms including AMNET, a zero-trust networking platform (amnet.ir), enterprise security routers, and Mobile Device Management (MDM) solutions.',
     achievements: [
       'Architected the AMNET zero-trust monitoring control panel using React and Material UI.',
       'Engineered WebGL network visualizations supporting ~10,000 devices.',
@@ -36,7 +36,7 @@ export const experienceData: Experience[] = [
   {
     id: 'freelance',
     company: 'Freelance',
-    role: 'Full-Stack Developer',
+    role: 'Full-Stack Engineer',
     startDate: '2023',
     endDate: '2024',
     location: 'Remote',
@@ -54,7 +54,7 @@ export const experienceData: Experience[] = [
       'React Native',
       'TypeScript',
       'Next.js',
-      'Nest.js',
+      'NestJS',
       'Mediasoup',
       'MongoDB',
       'PostgreSQL',
@@ -65,7 +65,7 @@ export const experienceData: Experience[] = [
   {
     id: 'ako',
     company: 'AKO',
-    role: 'Full-Stack Developer',
+    role: 'Full-Stack Engineer',
     startDate: 'December 2023',
     endDate: 'July 2024',
     location: 'Neyshabur, Iran',

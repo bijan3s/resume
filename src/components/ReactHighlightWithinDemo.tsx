@@ -4,7 +4,7 @@ import { Box, Typography, TextField, Paper, Chip, Stack, useTheme } from '@mui/m
 export const ReactHighlightWithinDemo: React.FC = () => {
   const theme = useTheme();
   const sampleText =
-    'React and TypeScript developer specializing in real-time dashboards, performance optimization, and automated testing.';
+    'React and TypeScript engineer specializing in real-time dashboards, performance optimization, and automated testing.';
   const [highlightTerm, setHighlightTerm] = useState('TypeScript');
 
   const presetTerms = ['TypeScript', 'React', 'dashboards', 'testing'];
@@ -51,12 +51,16 @@ export const ReactHighlightWithinDemo: React.FC = () => {
       sx={{
         p: 2.5,
         backgroundColor: theme.palette.mode === 'dark' ? '#0f172a' : '#f8fafc',
-        borderColor: theme.palette.mode === 'dark' ? 'rgba(129, 140, 248, 0.3)' : 'rgba(79, 70, 229, 0.3)',
+        borderColor:
+          theme.palette.mode === 'dark' ? 'rgba(129, 140, 248, 0.3)' : 'rgba(79, 70, 229, 0.3)',
         borderRadius: 3,
         mt: 2,
       }}
     >
-      <Typography variant="subtitle2" sx={{ fontWeight: 800, mb: 1, color: theme.palette.primary.main }}>
+      <Typography
+        variant="subtitle2"
+        sx={{ fontWeight: 800, mb: 1, color: theme.palette.primary.main }}
+      >
         ⚡ Live Interactive Demo (react-highlight-within)
       </Typography>
 
@@ -65,7 +69,10 @@ export const ReactHighlightWithinDemo: React.FC = () => {
       </Typography>
 
       <Stack direction="row" spacing={1} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
-        <Typography variant="caption" sx={{ alignSelf: 'center', color: theme.palette.text.secondary, fontWeight: 600 }}>
+        <Typography
+          variant="caption"
+          sx={{ alignSelf: 'center', color: theme.palette.text.secondary, fontWeight: 600 }}
+        >
           Presets:
         </Typography>
         {presetTerms.map((term) => (
@@ -102,7 +109,10 @@ export const ReactHighlightWithinDemo: React.FC = () => {
             boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
           }}
         >
-          <Typography variant="caption" sx={{ display: 'block', color: '#475569', mb: 0.5, fontWeight: 700 }}>
+          <Typography
+            variant="caption"
+            sx={{ display: 'block', color: '#475569', mb: 0.5, fontWeight: 700 }}
+          >
             Live Highlight Output:
           </Typography>
           <Box sx={{ color: '#0f172a', fontWeight: 500 }}>{renderHighlightedText()}</Box>

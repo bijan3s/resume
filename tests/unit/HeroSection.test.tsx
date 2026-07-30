@@ -13,15 +13,15 @@ describe('HeroSection component', () => {
 
   it('renders primary positioning headline', () => {
     renderHero();
-    expect(screen.getByText('Full-Stack TypeScript Developer')).toBeInTheDocument();
+    expect(screen.getByText('Full-Stack TypeScript Engineer')).toBeInTheDocument();
   });
 
   it('renders core skills proof points', () => {
     renderHero();
     expect(screen.getByText('React, Next.js & React Native')).toBeInTheDocument();
-    expect(screen.getByText('Real-Time Applications & High Test Coverage')).toBeInTheDocument();
+    expect(screen.getByText('Real-Time Systems & Automated Testing')).toBeInTheDocument();
     expect(screen.getByText('Node.js & NestJS')).toBeInTheDocument();
-    expect(screen.getByText('3+ Years Experience')).toBeInTheDocument();
+    expect(screen.getByText('3+ Years of Experience')).toBeInTheDocument();
   });
 
   it('renders View Projects and Download Résumé buttons', () => {

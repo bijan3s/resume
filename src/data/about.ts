@@ -2,7 +2,7 @@ import { AboutInfo } from '../types/portfolio';
 
 export const aboutData: AboutInfo = {
   bio: [
-    'I am a Full-Stack TypeScript Developer with 3+ years of professional experience building technically demanding applications involving real-time data streaming, monitoring dashboards, complex state, and automated testing.',
+    'Full-Stack TypeScript Engineer with 3+ years of experience building production systems across real-time data streaming, observability dashboards, complex client state, and automated testing.',
     'My background is in Mechanical Engineering from Ferdowsi University of Mashhad (Ranked 578 in Iran’s National Entrance Examination). I am based in Neyshabur, Iran, and open to relocation opportunities.',
   ],
   education: {

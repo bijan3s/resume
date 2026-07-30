@@ -24,7 +24,7 @@ describe('Sidebar component', () => {
     renderSidebar();
     const resumeBtn = screen.getByRole('link', { name: /download résumé/i });
     expect(resumeBtn).toBeInTheDocument();
-    expect(resumeBtn).toHaveAttribute('href', '/resume.pdf');
+    expect(resumeBtn).toHaveAttribute('href', './resume.pdf');
   });
 
   it('handles profile image load error gracefully with fallback', () => {

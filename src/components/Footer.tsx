@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
         >
           <Box>
             <Typography variant="body2" sx={{ fontWeight: 700, color: theme.palette.text.primary }}>
-              {profileData.name} — Full-Stack TypeScript Developer
+              {profileData.name} — Full-Stack TypeScript Engineer
             </Typography>
             <Typography variant="caption" sx={{ color: theme.palette.text.secondary }}>
               © {currentYear} • Built with React, TypeScript &amp; Material UI
