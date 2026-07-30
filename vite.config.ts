@@ -3,10 +3,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-// Support GitHub Pages repository sub-paths (e.g. /portfolio/)
-// Determine base path for GitHub Pages (repo name) when not explicitly set
-const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
-const basePath = process.env.VITE_BASE_PATH || (repoName ? `/${repoName}/` : './');
+// Base path for GitHub Pages or relative asset loading
+const basePath = process.env.VITE_BASE_PATH || './';
 
 export default defineConfig({
   plugins: [react()],
