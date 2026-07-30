@@ -8,7 +8,7 @@ interface ProfileImageProps {
 }
 
 export const ProfileImage: React.FC<ProfileImageProps> = ({
-  src = '/profile-placeholder.svg',
+  src = './profile-placeholder.svg',
   alt,
   size = 150,
 }) => {
@@ -19,7 +19,7 @@ export const ProfileImage: React.FC<ProfileImageProps> = ({
   const handleError = () => {
     if (!hasError) {
       setHasError(true);
-      setImgSrc('/profile-placeholder.svg');
+      setImgSrc('./profile-placeholder.svg');
     }
   };
 

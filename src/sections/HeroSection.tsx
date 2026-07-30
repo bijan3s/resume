@@ -81,7 +81,7 @@ export const HeroSection: React.FC = () => {
           color="primary"
           size="large"
           component="a"
-          href="/resume.pdf"
+          href={profileData.resumeUrl}
           download="Bijan_Seydabadi_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"

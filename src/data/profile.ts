@@ -10,8 +10,8 @@ export const profileData: Profile = {
   phone: '+989302798096',
   linkedInUrl: 'https://www.linkedin.com/in/bijan-seydabadi-7020763b0',
   githubUrl: 'https://github.com/bijan3s',
-  resumeUrl: '/resume.pdf',
-  profileImage: '/profile.png',
+  resumeUrl: './resume.pdf',
+  profileImage: './profile.png',
   location: 'Neyshabur, Iran',
   openToRelocation: true,
   proofPoints: [

@@ -189,7 +189,7 @@ export const Sidebar: React.FC = () => {
           variant="contained"
           size="small"
           component="a"
-          href="/resume.pdf"
+          href={profileData.resumeUrl}
           download="Bijan_Seydabadi_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"

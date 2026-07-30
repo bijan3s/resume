@@ -20,13 +20,13 @@ export const projectsData: Project[] = [
     media: [
       {
         type: 'image',
-        src: '/amnet.gif',
+        src: './amnet.gif',
         alt: 'AMNET Dashboard Demo GIF',
         caption: 'AMNET zero-trust Landing page animation',
       },
       {
         type: 'image',
-        src: '/amnet.png',
+        src: './amnet.png',
         alt: 'AMNET Dashboard Screenshot',
         caption: 'Sanitized AMNET zero-trust dashboard preview.',
       },
@@ -53,7 +53,7 @@ export const projectsData: Project[] = [
     media: [
       {
         type: 'image',
-        src: '/mafia.png',
+        src: './mafia.png',
         alt: 'Mobile UI Screenshots',
         caption: 'Kotlin/Compose clients.',
       },
