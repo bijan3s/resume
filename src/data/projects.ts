@@ -4,18 +4,12 @@ export const projectsData: Project[] = [
   {
     id: 'amnet',
     title: 'AMNET Zero-Trust Network Platform',
-    subtitle: 'Real-time control and monitoring panel for the AMNET zero-trust cybersecurity product (amnet.ir) at Amnesh.',
+    subtitle:
+      'Real-time control and monitoring panel for the AMNET zero-trust cybersecurity product (amnet.ir) at Amnesh.',
     context:
       'AMNET (amnet.ir) is an enterprise zero-trust networking platform enabling network administrators to monitor device relationships, security policies, and infrastructure state in real time.',
     role: 'Frontend Architect & Developer leading UI panel design and real-time state integration.',
-    technologies: [
-      'React',
-      'Material UI',
-      'NATS',
-      'JetStream',
-      'Docker',
-      'Playwright',
-    ],
+    technologies: ['React', 'Material UI', 'NATS', 'JetStream', 'Docker', 'Playwright'],
     links: [
       {
         label: 'View AMNET Product Website (amnet.ir)',
@@ -26,8 +20,14 @@ export const projectsData: Project[] = [
     media: [
       {
         type: 'image',
-        src: '/amnet-dashboard-placeholder.svg',
-        alt: 'Sanitized AMNET Dashboard Screenshot',
+        src: '/amnet.gif',
+        alt: 'AMNET Dashboard Demo GIF',
+        caption: 'AMNET zero-trust Landing page animation',
+      },
+      {
+        type: 'image',
+        src: '/amnet.png',
+        alt: 'AMNET Dashboard Screenshot',
         caption: 'Sanitized AMNET zero-trust dashboard preview.',
       },
     ],
@@ -47,15 +47,15 @@ export const projectsData: Project[] = [
       'Node.js',
       'Mediasoup',
       'Redis',
-      'PostgreSQL',
+      'Mongo',
       'Playwright',
     ],
     media: [
       {
         type: 'image',
-        src: '/mafia-mobile-placeholder.svg',
+        src: '/mafia.png',
         alt: 'Mobile UI Screenshots',
-        caption: 'Kotlin/Compose & React Native clients.',
+        caption: 'Kotlin/Compose clients.',
       },
     ],
   },

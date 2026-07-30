@@ -18,7 +18,19 @@ export const App: React.FC = () => {
 
   return (
     <ThemeProvider>
-      <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative', backgroundColor: '#ffffff' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+          position: 'relative',
+          background: {
+            xs: '#ffffff',
+            lg: 'linear-gradient(to right, #090d16 0, #090d16 300px, #ffffff 300px, #ffffff 100%)',
+            xl: 'linear-gradient(to right, #090d16 0, #090d16 340px, #ffffff 340px, #ffffff 100%)',
+          },
+        }}
+      >
         {/* Dark Edge-to-Edge Desktop Sidebar */}
         <Sidebar />
 

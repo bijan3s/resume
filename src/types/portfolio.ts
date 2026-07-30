@@ -14,13 +14,6 @@ export interface Profile {
   proofPoints: string[];
 }
 
-export interface Metric {
-  id: string;
-  value: string;
-  label: string;
-  description: string;
-}
-
 export interface Experience {
   id: string;
   company: string;
@@ -66,14 +59,6 @@ export interface Project {
   media?: ProjectMedia[];
   hasInteractiveDemo?: boolean;
   codeSnippet?: string;
-}
-
-export interface EngineeringPrinciple {
-  id: string;
-  title: string;
-  quote: string;
-  description: string;
-  bullets: string[];
 }
 
 export interface SkillGroup {

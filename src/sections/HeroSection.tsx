@@ -1,8 +1,8 @@
-import React from 'react';
-import { Box, Typography, Button, Stack, Grid, useTheme } from '@mui/material';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import DescriptionIcon from '@mui/icons-material/Description';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import DescriptionIcon from '@mui/icons-material/Description';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import { Box, Button, Grid, Stack, Typography, useTheme } from '@mui/material';
+import React from 'react';
 import { profileData } from '../data/profile';
 
 export const HeroSection: React.FC = () => {
@@ -54,7 +54,10 @@ export const HeroSection: React.FC = () => {
           <Grid item xs={12} sm={6} key={point}>
             <Stack direction="row" spacing={1.5} alignItems="center">
               <CheckCircleOutlineIcon color="primary" fontSize="small" />
-              <Typography variant="body2" sx={{ fontWeight: 600, color: theme.palette.text.primary }}>
+              <Typography
+                variant="body2"
+                sx={{ fontWeight: 600, color: theme.palette.text.primary }}
+              >
                 {point}
               </Typography>
             </Stack>
@@ -78,12 +81,13 @@ export const HeroSection: React.FC = () => {
           color="primary"
           size="large"
           component="a"
-          href="/resume.html"
+          href="/resume.pdf"
+          download="Bijan_Seydabadi_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           startIcon={<DescriptionIcon />}
         >
-          View / Download Résumé
+          Download Résumé
         </Button>
       </Stack>
     </Box>

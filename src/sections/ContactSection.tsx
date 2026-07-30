@@ -1,10 +1,10 @@
-import React from 'react';
-import { Box, Typography, Button, Card, CardContent, Grid, Stack, useTheme } from '@mui/material';
+import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import DownloadIcon from '@mui/icons-material/Download';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Box, Button, Card, CardContent, Grid, Stack, Typography, useTheme } from '@mui/material';
+import React from 'react';
 import { SectionHeader } from '../components/SectionHeader';
 import { profileData } from '../data/profile';
 
@@ -79,7 +79,7 @@ export const ContactSection: React.FC = () => {
                   startIcon={<DownloadIcon />}
                   fullWidth
                 >
-                  Download Résumé (PDF)
+                  Download Résumé
                 </Button>
               </Stack>
             </CardContent>
@@ -87,12 +87,18 @@ export const ContactSection: React.FC = () => {
         </Grid>
 
         <Grid item xs={12} md={6}>
-          <Card variant="outlined" sx={{ height: '100%', backgroundColor: theme.palette.mode === 'dark' ? '#0f172a' : '#f8fafc' }}>
+          <Card
+            variant="outlined"
+            sx={{
+              height: '100%',
+              backgroundColor: theme.palette.mode === 'dark' ? '#0f172a' : '#f8fafc',
+            }}
+          >
             <CardContent sx={{ p: 4 }}>
               <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>
                 Location & Details
               </Typography>
-              
+
               <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: 2 }}>
                 <LocationOnIcon color="primary" />
                 <Typography variant="body1" sx={{ fontWeight: 700 }}>
@@ -100,8 +106,12 @@ export const ContactSection: React.FC = () => {
                 </Typography>
               </Stack>
 
-              <Typography variant="body2" sx={{ color: theme.palette.text.secondary, lineHeight: 1.8 }}>
-                Specializing in Full-Stack TypeScript development, React & Node.js web platforms, zero-trust network dashboards, and automated UI testing.
+              <Typography
+                variant="body2"
+                sx={{ color: theme.palette.text.secondary, lineHeight: 1.8 }}
+              >
+                Specializing in Full-Stack TypeScript development, React & Node.js web platforms,
+                zero-trust network dashboards, and automated UI testing.
               </Typography>
             </CardContent>
           </Card>

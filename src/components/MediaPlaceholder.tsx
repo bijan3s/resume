@@ -57,22 +57,41 @@ export const MediaPlaceholder: React.FC<MediaPlaceholderProps> = ({
           overflow: 'hidden',
         }}
       >
-        <Box
-          component="img"
-          src={src}
-          alt={alt}
-          loading="lazy"
-          onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-            // Hide image on load error and display neutral fallback text block
-            e.currentTarget.style.display = 'none';
-          }}
-          sx={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain',
-            p: 1,
-          }}
-        />
+        {type === 'video' ? (
+          <Box
+            component="video"
+            src={src}
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+            aria-label={alt}
+            sx={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              p: 1,
+            }}
+          />
+        ) : (
+          <Box
+            component="img"
+            src={src}
+            alt={alt}
+            loading="lazy"
+            onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+              // Hide image on load error and display neutral fallback text block
+              e.currentTarget.style.display = 'none';
+            }}
+            sx={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              p: 1,
+            }}
+          />
+        )}
         {/* Fallback container shown if image fails or isn't rendered */}
         <Box
           sx={{
