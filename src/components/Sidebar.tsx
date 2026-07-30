@@ -95,9 +95,7 @@ export const Sidebar: React.FC = () => {
         <Stack
           direction="row"
           spacing={0.5}
-          alignItems="center"
-          justifyContent="center"
-          sx={{ mb: 1.5 }}
+          sx={{ mb: 1.5, alignItems: 'center', justifyContent: 'center' }}
         >
           <LocationOnIcon sx={{ fontSize: '0.95rem', color: '#94a3b8' }} />
           <Typography
@@ -133,8 +131,7 @@ export const Sidebar: React.FC = () => {
         <Stack
           direction="row"
           spacing={1.5}
-          justifyContent="center"
-          sx={{ mb: 2.5, width: '100%' }}
+          sx={{ mb: 2.5, width: '100%', justifyContent: 'center' }}
         >
           <IconButton
             component="a"
@@ -234,9 +231,7 @@ export const Sidebar: React.FC = () => {
         <Stack
           direction="row"
           spacing={0.8}
-          flexWrap="wrap"
-          justifyContent="center"
-          sx={{ gap: 0.8 }}
+          sx={{ gap: 0.8, flexWrap: 'wrap', justifyContent: 'center' }}
         >
           {featuredSkillBadges.map((skill) => (
             <Chip

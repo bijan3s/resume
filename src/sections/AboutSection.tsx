@@ -3,7 +3,7 @@ import { Box, Container, Typography, Card, CardContent, Grid, Stack, Chip, useTh
 import SchoolIcon from '@mui/icons-material/School';
 import LanguageIcon from '@mui/icons-material/Language';
 import PersonIcon from '@mui/icons-material/Person';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutlined';
 import { SectionHeader } from '../components/SectionHeader';
 import { aboutData } from '../data/about';
 
@@ -28,10 +28,10 @@ export const AboutSection: React.FC = () => {
 
         <Grid container spacing={4}>
           {/* Bio Narrative Column */}
-          <Grid item xs={12} md={7}>
+          <Grid size={{ xs: 12, md: 7 }}>
             <Card sx={{ height: '100%', backgroundColor: theme.palette.background.paper, borderColor: theme.palette.divider }}>
               <CardContent sx={{ p: { xs: 3, md: 4 } }}>
-                <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 2.5 }}>
+                <Stack direction="row" spacing={1.5} sx={{ mb: 2.5, alignItems: 'center' }}>
                   <Box sx={{ p: 1, borderRadius: 1, backgroundColor: theme.palette.mode === 'dark' ? '#0f172a' : '#f1f5f9' }}>
                     <PersonIcon color="primary" />
                   </Box>
@@ -52,12 +52,12 @@ export const AboutSection: React.FC = () => {
           </Grid>
 
           {/* Education & Languages Column */}
-          <Grid item xs={12} md={5}>
+          <Grid size={{ xs: 12, md: 5 }}>
             <Stack spacing={3} sx={{ height: '100%' }}>
               {/* Education Card */}
               <Card sx={{ backgroundColor: theme.palette.background.paper, borderColor: theme.palette.divider }}>
                 <CardContent sx={{ p: 3 }}>
-                  <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 2 }}>
+                  <Stack direction="row" spacing={1.5} sx={{ mb: 2, alignItems: 'center' }}>
                     <Box sx={{ p: 1, borderRadius: 1, backgroundColor: theme.palette.mode === 'dark' ? '#0f172a' : '#f1f5f9' }}>
                       <SchoolIcon color="primary" />
                     </Box>
@@ -81,7 +81,7 @@ export const AboutSection: React.FC = () => {
 
                   <Stack spacing={1}>
                     {aboutData.education.highlights.map((highlight, idx) => (
-                      <Stack direction="row" spacing={1} alignItems="flex-start" key={idx}>
+                      <Stack direction="row" spacing={1} sx={{ alignItems: 'flex-start' }} key={idx}>
                         <CheckCircleOutlineIcon sx={{ color: theme.palette.secondary.main, fontSize: '1rem', mt: 0.2 }} />
                         <Typography variant="caption" sx={{ color: theme.palette.text.secondary, fontSize: '0.85rem' }}>
                           {highlight}
@@ -95,7 +95,7 @@ export const AboutSection: React.FC = () => {
               {/* Languages Card */}
               <Card sx={{ backgroundColor: theme.palette.background.paper, borderColor: theme.palette.divider, flexGrow: 1 }}>
                 <CardContent sx={{ p: 3 }}>
-                  <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 2 }}>
+                  <Stack direction="row" spacing={1.5} sx={{ mb: 2, alignItems: 'center' }}>
                     <Box sx={{ p: 1, borderRadius: 1, backgroundColor: theme.palette.mode === 'dark' ? '#0f172a' : '#f1f5f9' }}>
                       <LanguageIcon color="primary" />
                     </Box>

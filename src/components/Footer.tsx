@@ -27,9 +27,8 @@ export const Footer: React.FC = () => {
       >
         <Stack
           direction={{ xs: 'column', sm: 'row' }}
-          justifyContent="space-between"
-          alignItems="center"
           spacing={2}
+          sx={{ justifyContent: 'space-between', alignItems: 'center' }}
         >
           <Box>
             <Typography variant="body2" sx={{ fontWeight: 700, color: theme.palette.text.primary }}>

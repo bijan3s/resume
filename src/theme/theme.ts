@@ -80,7 +80,7 @@ export const appTheme = createTheme({
             outlineOffset: '2px',
           },
         },
-        containedPrimary: {
+        contained: {
           color: '#ffffff !important',
           backgroundColor: '#4f46e5',
           boxShadow: '0 4px 14px rgba(79, 70, 229, 0.3)',
@@ -90,7 +90,7 @@ export const appTheme = createTheme({
             transform: 'translateY(-2px)',
           },
         },
-        outlinedPrimary: {
+        outlined: {
           borderColor: 'rgba(79, 70, 229, 0.4)',
           backgroundColor: 'transparent',
           '&:hover': {

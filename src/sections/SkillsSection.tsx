@@ -42,7 +42,7 @@ export const SkillsSection: React.FC = () => {
         <CardContent sx={{ p: { xs: 3, sm: 4, md: 5 } }}>
           <Grid container spacing={2.5}>
             {starSkillsData.map((skill) => (
-              <Grid item xs={12} md={6} key={skill.name}>
+              <Grid size={{ xs: 12, md: 6 }} key={skill.name}>
                 <Box
                   sx={{
                     p: 2.5,
@@ -84,7 +84,7 @@ export const SkillsSection: React.FC = () => {
                     />
                   </Box>
 
-                  <Stack direction="row" spacing={0.5} alignItems="center">
+                  <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
                     <Rating
                       value={skill.rating}
                       readOnly

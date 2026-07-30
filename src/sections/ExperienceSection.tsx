@@ -47,8 +47,8 @@ export const ExperienceSection: React.FC = () => {
           >
             <CardContent sx={{ p: { xs: 3, md: 4 } }}>
               {/* Card Header Row */}
-              <Grid container spacing={2} alignItems="flex-start" sx={{ mb: 2 }}>
-                <Grid item xs={12} sm={8}>
+              <Grid container spacing={2} sx={{ mb: 2, alignItems: 'flex-start' }}>
+                <Grid size={{ xs: 12, sm: 8 }}>
                   <Typography
                     variant="h5"
                     component="h3"
@@ -57,8 +57,8 @@ export const ExperienceSection: React.FC = () => {
                     {item.role}
                   </Typography>
 
-                  <Stack direction="row" spacing={1.5} alignItems="center" flexWrap="wrap" sx={{ gap: 1 }}>
-                    <Stack direction="row" spacing={0.5} alignItems="center">
+                  <Stack direction="row" spacing={1.5} sx={{ gap: 1, alignItems: 'center', flexWrap: 'wrap' }}>
+                    <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
                       <BusinessIcon sx={{ fontSize: '1rem', color: theme.palette.primary.main }} />
                       <Typography
                         variant="subtitle1"
@@ -91,20 +91,20 @@ export const ExperienceSection: React.FC = () => {
                   </Stack>
                 </Grid>
 
-                <Grid item xs={12} sm={4} sx={{ textAlign: { xs: 'left', sm: 'right' } }}>
+                <Grid size={{ xs: 12, sm: 4 }} sx={{ textAlign: { xs: 'left', sm: 'right' } }}>
                   <Stack
                     direction="column"
-                    alignItems={{ xs: 'flex-start', sm: 'flex-end' }}
                     spacing={0.5}
+                    sx={{ alignItems: { xs: 'flex-start', sm: 'flex-end' } }}
                   >
-                    <Stack direction="row" spacing={0.5} alignItems="center">
+                    <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
                       <CalendarTodayIcon sx={{ fontSize: '0.85rem', color: theme.palette.text.secondary }} />
                       <Typography variant="body2" sx={{ fontWeight: 600, color: theme.palette.text.primary }}>
                         {item.startDate} – {item.endDate}
                       </Typography>
                     </Stack>
 
-                    <Stack direction="row" spacing={0.5} alignItems="center">
+                    <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
                       <LocationOnIcon sx={{ fontSize: '0.85rem', color: theme.palette.text.secondary }} />
                       <Typography variant="caption" sx={{ color: theme.palette.text.secondary, fontWeight: 500 }}>
                         {item.location === item.workMode ? item.location : `${item.location} (${item.workMode})`}
@@ -172,7 +172,7 @@ export const ExperienceSection: React.FC = () => {
               <Typography variant="caption" sx={{ fontWeight: 700, display: 'block', mb: 1, color: theme.palette.text.secondary }}>
                 Technologies Used:
               </Typography>
-              <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ gap: 0.8 }}>
+              <Stack direction="row" spacing={1} sx={{ gap: 0.8, flexWrap: 'wrap' }}>
                 {item.technologies.map((tech) => (
                   <Chip
                     key={tech}

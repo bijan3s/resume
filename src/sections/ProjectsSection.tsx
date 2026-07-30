@@ -50,7 +50,7 @@ export const ProjectsSection: React.FC = () => {
             <CardContent sx={{ p: { xs: 3, sm: 4, md: 4 } }}>
               {/* Header Title Row */}
               <Box sx={{ mb: 2 }}>
-                <Stack direction="row" spacing={1} alignItems="center" flexWrap="wrap" sx={{ gap: 1, mb: 1 }}>
+                <Stack direction="row" spacing={1} sx={{ gap: 1, mb: 1, alignItems: 'center', flexWrap: 'wrap' }}>
                   <Typography variant="caption" sx={{ fontFamily: "'JetBrains Mono', monospace", color: theme.palette.primary.main, fontWeight: 700 }}>
                     CASE STUDY 0{index + 1}
                   </Typography>
@@ -72,7 +72,7 @@ export const ProjectsSection: React.FC = () => {
 
               <Grid container spacing={3}>
                 {/* Context, Role & Action Column */}
-                <Grid item xs={12} lg={project.media || project.hasInteractiveDemo ? 7 : 12}>
+                <Grid size={{ xs: 12, lg: project.media || project.hasInteractiveDemo ? 7 : 12 }}>
                   {/* What the Project Does & Done */}
                   <Box sx={{ mb: 2 }}>
                     <Typography variant="subtitle2" sx={{ fontWeight: 700, color: theme.palette.text.primary, mb: 0.5 }}>
@@ -121,7 +121,7 @@ export const ProjectsSection: React.FC = () => {
                     <Typography variant="caption" sx={{ fontWeight: 700, display: 'block', mb: 1, color: theme.palette.text.secondary }}>
                       Tech Stack:
                     </Typography>
-                    <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ gap: 0.8 }}>
+                    <Stack direction="row" spacing={1} sx={{ gap: 0.8, flexWrap: 'wrap' }}>
                       {project.technologies.map((tech) => (
                         <Chip
                           key={tech}
@@ -141,7 +141,7 @@ export const ProjectsSection: React.FC = () => {
 
                   {/* Links & Calls to Action */}
                   {project.links && project.links.length > 0 && (
-                    <Stack direction="row" spacing={2} flexWrap="wrap" sx={{ gap: 1.5 }}>
+                    <Stack direction="row" spacing={2} sx={{ gap: 1.5, flexWrap: 'wrap' }}>
                       {project.links.map((link) => (
                         <Button
                           key={link.label}
@@ -163,7 +163,7 @@ export const ProjectsSection: React.FC = () => {
 
                 {/* Media & Interactive Demo Column */}
                 {(project.media || project.hasInteractiveDemo) && (
-                  <Grid item xs={12} lg={5}>
+                  <Grid size={{ xs: 12, lg: 5 }}>
                     <Stack spacing={2.5}>
                       {project.media?.map((m, mIdx) => (
                         <MediaPlaceholder

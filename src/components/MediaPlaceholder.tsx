@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Paper, useTheme } from '@mui/material';
 import ImageIcon from '@mui/icons-material/Image';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutlined';
 
 interface MediaPlaceholderProps {
   type: 'image' | 'video' | 'diagram';

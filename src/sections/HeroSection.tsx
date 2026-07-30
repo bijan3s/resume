@@ -1,4 +1,4 @@
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutlined';
 import DescriptionIcon from '@mui/icons-material/Description';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Box, Button, Grid, Stack, Typography, useTheme } from '@mui/material';
@@ -51,8 +51,8 @@ export const HeroSection: React.FC = () => {
       {/* Engineering Proof Points Grid */}
       <Grid container spacing={2} sx={{ mb: 4, maxWidth: '780px' }}>
         {profileData.proofPoints.map((point) => (
-          <Grid item xs={12} sm={6} key={point}>
-            <Stack direction="row" spacing={1.5} alignItems="center">
+          <Grid size={{ xs: 12, sm: 6 }} key={point}>
+            <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
               <CheckCircleOutlineIcon color="primary" fontSize="small" />
               <Typography
                 variant="body2"
@@ -66,7 +66,7 @@ export const HeroSection: React.FC = () => {
       </Grid>
 
       {/* Action Buttons */}
-      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} flexWrap="wrap" sx={{ gap: 1.5 }}>
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ gap: 1.5, flexWrap: 'wrap' }}>
         <Button
           variant="contained"
           color="primary"

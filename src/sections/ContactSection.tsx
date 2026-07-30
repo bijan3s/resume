@@ -20,7 +20,7 @@ export const ContactSection: React.FC = () => {
       />
 
       <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Card variant="outlined" sx={{ height: '100%' }}>
             <CardContent sx={{ p: 4 }}>
               <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>
@@ -86,7 +86,7 @@ export const ContactSection: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Card
             variant="outlined"
             sx={{
@@ -99,7 +99,7 @@ export const ContactSection: React.FC = () => {
                 Location & Details
               </Typography>
 
-              <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: 2 }}>
+              <Stack direction="row" spacing={1} sx={{ mb: 2, alignItems: 'center' }}>
                 <LocationOnIcon color="primary" />
                 <Typography variant="body1" sx={{ fontWeight: 700 }}>
                   {profileData.location}
